@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HelperClass } from 'src/app/helper-class';
 // Duplicate import with the parent class HelperClass
-import { MyServiceService } from 'src/app/my-service.service';
+import { MyService } from 'src/app/my-service.service';
 
 @Component({
   selector: 'app-my-component',
@@ -10,13 +10,14 @@ import { MyServiceService } from 'src/app/my-service.service';
 })
 export class MyComponent extends HelperClass implements OnInit {
 
-  constructor(private service: MyServiceService) {
+  constructor(private service: MyService) {
     // Duplicate injection with HelperClass
     super(service);
   }
 
   ngOnInit(): void {
-    this.myService.log('a white cat');
+    this.myService.log('my service called in MyComponent');
+    this.help_method();
   }
 
 }

@@ -1,5 +1,9 @@
-import { MyServiceService } from 'src/app/my-service.service';
+import { MyService } from 'src/app/my-service.service';
 
 export class HelperClass {
-  constructor(public myService: MyServiceService) { }
+  constructor(public myService: MyService) { }
+
+  help_method() {
+    console.log('help method');
+  }
 }
