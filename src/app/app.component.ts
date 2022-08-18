@@ -10,14 +10,14 @@ import { MyService } from 'src/app/my-service.service';
 })
 export class MyComponent extends HelperClass implements OnInit {
 
+  // Duplicate injection with HelperClass
   constructor(private service: MyService) {
-    // Duplicate injection with HelperClass
     super(service);
   }
 
   ngOnInit(): void {
     this.myService.log('my service called in MyComponent');
-    this.help_method();
+    this.helper_class_method();
   }
 
 }
