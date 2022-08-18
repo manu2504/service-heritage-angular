@@ -1,5 +1,9 @@
+import { Injectable } from '@angular/core';
 import { MyService } from 'src/app/my-service.service';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class HelperClass {
   constructor(public myService: MyService) { }
 
